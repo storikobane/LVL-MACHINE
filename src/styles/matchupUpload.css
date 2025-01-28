@@ -1,0 +1,235 @@
+/* MatchupUpload.css */
+
+/* Root Color Palette */
+:root {
+  --soft-blue: #ADD8E6;
+  --light-gray: #D3D3D3;
+  --charcoal: #36454F;
+  --subtle-mint: #98FB98;
+  --white: #FFFFFF;
+  --black: #000000;
+  --dark-gray: #1C1C1C;
+}
+
+/* General Page Styling */
+.matchups-page {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, var(--dark-gray), var(--charcoal));
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--soft-blue);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Upload Section */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.upload-section label {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: var(--subtle-mint);
+  color: var(--charcoal);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.upload-section label:hover {
+  background-color: var(--light-gray);
+}
+
+.upload-section input.upload-input {
+  display: none;
+}
+
+.upload-section button {
+  margin: 5px 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section button.glow-button {
+  background-color: var(--subtle-mint);
+  color: var(--charcoal);
+}
+
+.upload-section button.glow-button:hover {
+  background-color: var(--soft-blue);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.upload-section button.reset-button {
+  background-color: var(--light-gray);
+  color: var(--charcoal);
+}
+
+.upload-section button.reset-button:hover {
+  background-color: var(--soft-blue);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* League Info Styling */
+.league-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.league-info h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--subtle-mint);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.league-info p {
+  font-size: 1.2rem;
+  color: var(--light-gray);
+}
+
+/* Table Container */
+.opponents-table {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 4px solid var(--charcoal);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.opponents-table thead {
+  background: linear-gradient(135deg, var(--soft-blue), var(--subtle-mint));
+}
+
+.opponents-table th {
+  font-size: 1rem;
+  color: var(--charcoal);
+  padding: 15px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: col-resize; /* Indicate column resizing */
+}
+
+.opponents-table tbody tr:nth-child(odd) {
+  background-color: var(--charcoal);
+}
+
+.opponents-table tbody tr:nth-child(even) {
+  background-color: var(--dark-gray);
+}
+
+.opponents-table tbody tr:hover {
+  background-color: var(--light-gray);
+}
+
+.opponents-table td {
+  padding: 10px;
+  text-align: center;
+  color: var(--white);
+}
+
+/* Column Width Customization */
+.opponents-table th,
+.opponents-table td {
+  width: auto; /* Default for all columns */
+}
+
+.opponents-table th:nth-child(2),
+.opponents-table td:nth-child(2) {
+  width: 35px; /* Defensive Rating column */
+}
+
+.opponents-table input {
+  width: 90%;
+  padding: 8px;
+  background-color: var(--dark-gray);
+  border: 2px solid var(--charcoal);
+  color: var(--white);
+  text-align: center;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.opponents-table input:focus {
+  outline: none;
+  border-color: var(--subtle-mint);
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-text {
+  font-size: 1.5rem;
+  color: var(--subtle-mint);
+  margin-bottom: 15px;
+}
+
+.load {
+  border: 4px solid var(--dark-gray);
+  border-top: 4px solid var(--soft-blue);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .league-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .opponents-table th,
+  .opponents-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .upload-section button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

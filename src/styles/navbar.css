@@ -1,0 +1,50 @@
+/* General Navbar Styling */
+nav {
+  display: flex;
+  justify-content: center; /* Center the navbar */
+  align-items: center;
+  background-color: #36454F; /* Charcoal */
+  padding: 10px 20px;
+  color: #D3D3D3; /* Light gray */
+  max-width: 414px; /* Maximum width for portrait mode */
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Navbar Links Container */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar Items */
+.nav-link {
+  color: #D3D3D3; /* Light gray text */
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 14px; /* Base font size */
+}
+
+/* Active Link Style */
+.nav-link.active {
+  background-color: #ADD8E6; /* Soft blue */
+  color: #000000; /* Black text */
+}
+
+/* Hover Effect for Links */
+.nav-link:hover {
+  background-color: #ADD8E6; /* Soft blue */
+  color: #000000; /* Black text */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 375px) {
+  .nav-link {
+    font-size: 12px; /* Smaller font size for smaller screens */
+  }
+}

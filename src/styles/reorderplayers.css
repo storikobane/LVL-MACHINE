@@ -1,0 +1,102 @@
+.reorder-page {
+  max-width: 1500px; /* Control total page width */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1500px; /* Ensure rows do not overflow */
+}
+
+.player-list li {
+  margin: 5px 0;
+  background-color: var(--charcoal); /* Charcoal for player rows */
+  border-radius: 4px;
+  padding: 10px;
+  display: flex; /* Use flex to align rows uniformly */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-list li:nth-child(even) {
+  background-color: #3a3a3a; /* Alternating row colors */
+}
+
+.player-list li:nth-child(odd) {
+  background-color: var(--charcoal);
+}
+
+.player-row {
+  display: grid; /* Use grid to control column widths */
+  grid-template-columns: 30px auto 80px; /* Columns for position, name, and rating */
+  gap: 10px; /* Space between columns */
+  align-items: center;
+}
+
+.player-position {
+  text-align: center;
+  font-weight: bold;
+  width: 10px; /* Fixed width for position */
+}
+
+.player-name {
+  text-align: left;
+  padding: 5px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: var(--dark-gray); /* Darker background for inputs */
+  color: var(--light-gray); /* Light gray text for inputs */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevent name wrapping */
+}
+
+.player-rating {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: var(--dark-gray); /* Darker background for inputs */
+  color: var(--light-gray); /* Light gray text for inputs */
+  width: 30px; /* Fixed width for ratings */
+}
+
+/* Ensure all rows stay the same size */
+.player-list li {
+  height: auto; /* Automatically adjust height based on content */
+  display: table-row; /* Uniform row height */
+}
+
+.player-row > * {
+  display: table-cell; /* Ensure columns align uniformly */
+  vertical-align: middle; /* Vertically align content */
+}
+.save-button {
+  background-color: var(--soft-blue); /* Soft blue for save button */
+  color: var(--black); /* Dark text to contrast with the light button */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.save-button:hover {
+  background-color: var(--charcoal); /* Darker on hover */
+  color: var(--soft-blue); /* Soft blue on hover */
+}
+
+.save-button:active {
+  background-color: #008fb3; /* Darker coral on active */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Reduced shadow */
+  transform: translateY(1px); /* Slight push-down effect */
+}

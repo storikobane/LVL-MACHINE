@@ -1,0 +1,172 @@
+/* MatchupGen.css */
+
+/* General Page Styling */
+.matchup-gen-page {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, var(--dark-gray), var(--charcoal));
+  color: var(--light-gray); /* Light gray text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* League Info Styling */
+.league-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.league-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--soft-blue); /* Soft blue for league name */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.league-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: var(--light-gray); /* Light gray for league tier */
+}
+
+/* Table Container */
+.table-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--charcoal); /* Charcoal for table container */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5); /* White glow behind table */
+  overflow: hidden;
+  border: 5px solid #333; /* Dark border */
+}
+
+/* Table Styling */
+.matchup-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.matchup-table thead {
+  background: linear-gradient(135deg, var(--soft-blue), var(--subtle-mint)); /* Gradient for header */
+}
+
+.matchup-table th {
+  font-size: 1rem;
+  color: var(--white); /* White for header text */
+  padding: 10px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.matchup-table thead th:first-child {
+  text-align: left;
+}
+
+.matchup-table tbody tr:nth-child(odd) {
+  background-color: var(--charcoal); /* Darker gray for odd rows */
+}
+
+.matchup-table tbody tr:nth-child(even) {
+  background-color: #252525; /* Alternating row colors */
+}
+
+.matchup-table tbody tr:hover {
+  background-color: #333; /* Darker on hover */
+}
+
+.matchup-table td {
+  padding: 5px;
+  color: var(--light-gray); /* Light gray for table cells */
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Column width adjustments */
+.matchup-table th:nth-child(2),
+.matchup-table td:nth-child(2) {
+  width: 35px; /* Defensive rating column width */
+}
+
+/* Inputs */
+.matchup-table input {
+  width: 90%;
+  padding: 4px;
+  background-color: var(--dark-gray); /* Darker background for inputs */
+  border: 3px solid #444; /* Dark border */
+  color: var(--light-gray); /* Light gray text for inputs */
+  text-align: center;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.matchup-table input:focus {
+  outline: none;
+  border-color: var(--soft-blue); /* Soft blue on focus */
+}
+
+/* Buttons */
+.generate-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: var(--soft-blue); /* Soft blue for buttons */
+  border: none;
+  color: var(--black); /* Dark text for buttons */
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.generate-button:hover {
+  background-color: var(--charcoal); /* Darker on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reset-button {
+  margin-left: 10px;
+  padding: 12px 25px;
+  background-color: #f44336; /* Red for reset button */
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:hover {
+  background-color: #e53935; /* Darker red on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .league-info h1 {
+    font-size: 2rem;
+  }
+
+  .league-info p {
+    font-size: 1rem;
+  }
+
+  .matchup-table th,
+  .matchup-table td {
+    font-size: 0.9rem;
+    padding: 8px 5px;
+  }
+
+  .generate-button,
+  .reset-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

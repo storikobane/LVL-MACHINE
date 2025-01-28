@@ -1,0 +1,130 @@
+/* Stats Update Page Styles */
+
+.stats-update {
+    padding: 20px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00e0ff;
+}
+
+.message {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #00e0ff;
+}
+
+.matchup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.matchup-header .label {
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.matchup-header .opponent-name {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00e0ff;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stats-table th,
+.stats-table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.stats-table th {
+    background-color: #36454F;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.stats-table td {
+    background-color: #2a2a2a;
+}
+
+.stats-table th:nth-child(1) {
+    width: 30%;
+}
+
+.stats-table th:nth-child(2),
+.stats-table th:nth-child(3),
+.stats-table th:nth-child(4),
+.stats-table th:nth-child(5) {
+    width: 15%;
+}
+
+.stats-table td input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #ffffff;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    color: #00e0ff;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00e0ff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #008fb3;
+}
+
+button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+}

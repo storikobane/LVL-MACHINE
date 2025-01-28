@@ -1,0 +1,167 @@
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+}
+/* General Page Styling */
+.lineups-page {
+  max-width: 450px;
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #000000, #1C1C1C); /* Dark gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+h2 {
+  color: #00e0ff;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.glow-button {
+  background-color: #222;
+  color: #FFFFFF;
+  border: 2px solid #00e0ff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.glow-button:hover {
+  background-color: #00e0ff;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* Player List Styling */
+.player-list {
+  margin-top: 20px;
+  width: 100%; /* Ensure full-width scaling */
+}
+
+/* Player Rows */
+.player-row {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center;
+  background: #2a2a2a;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Position Column */
+.player-row span {
+  width: 10px; /* Adjusted column width */
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* Name Input */
+.name-input {
+  flex: 1;
+  min-width: 150px;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #1C1C1C !important; /* Dark background */
+  color: #00e0ff !important; /* Soft blue text */
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Rating Input */
+.rating-input {
+  width: 30px;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #1C1C1C !important; /* Dark background */
+  color: #00e0ff !important; /* Soft blue text */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hidden File Input */
+input[type="file"] {
+  display: none;
+}
+
+/* Wrapper for the File Input Label */
+.input-div {
+  display: inline-block;
+  cursor: pointer;
+  color: #00e0ff;
+  border: 1px dashed #00e0ff;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.input-div:hover {
+  background-color: #00e0ff;
+  color: #000000;
+}
+
+/* Save Button */
+.save-button {
+  margin-top: 20px;
+}
+
+/* Center Everything */
+.lineups-page, .player-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers child items horizontally */
+}
+
+.player-row {
+  width: 100%; /* Ensures rows span the container width */
+  max-width: 600px;
+}
+
+/* Additional Tweaks for Responsiveness */
+@media (max-width: 800px) {
+  .name-input {
+    min-width: 150px;
+    font-size: 12px;
+  }
+
+  .rating-input {
+    width: 40px;
+    font-size: 12px;
+  }
+}
+/* Save Button Styling */
+.save-button {
+  background-color: #222; /* Dark background */
+  color: #FFFFFF; /* Bright text */
+  border: 2px solid #00e0ff; /* Glow effect */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.save-button:hover {
+  background-color: #00e0ff; /* Bright accent color */
+  color: #000000; /* Contrast on hover */
+  transform: scale(1.05); /* Subtle hover effect */
+}

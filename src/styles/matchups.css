@@ -1,0 +1,64 @@
+/* General Page Styling */
+.matchups-page {
+  background-color: var(--dark-gray); /* Dark gray background */
+  color: var(--light-gray); /* Light gray text */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: var(--soft-blue); /* Soft blue for headings */
+  margin-bottom: 20px;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+.glow-button {
+  background-color: var(--soft-blue); /* Soft blue for buttons */
+  border: none;
+  border-radius: 5px;
+  color: var(--black); /* Dark text for buttons */
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+  background-color: var(--charcoal); /* Darker on hover */
+  box-shadow: 0px 0px 10px var(--soft-blue); /* Soft blue shadow on hover */
+}
+
+/* Tables Styling */
+.tables-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.matchup-table {
+  width: 45%;
+  border-collapse: collapse;
+  background-color: var(--charcoal); /* Charcoal for table */
+  color: var(--light-gray); /* Light gray for table text */
+  border: 1px solid #444; /* Dark border */
+  text-align: left;
+}
+
+.matchup-table th, .matchup-table td {
+  padding: 10px;
+  border: 1px solid #444; /* Dark border for cells */
+}
+
+.matchup-table th {
+  background-color: var(--soft-blue); /* Soft blue for header */
+  color: var(--black); /* Black for header text */
+}
+
+.matchup-table tr:nth-child(even) {
+  background-color: #252525; /* Alternating row colors */
+}
